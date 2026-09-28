@@ -23,7 +23,9 @@ class Sniffer:
         self.evil_twin_detector = evil_twin_detector
 
     def start(self):
-        print(f"NetworkEye listening on {self.interface}... (Ctrl+C to stop)\n")
+        print(f"[+]Network Monitor Tool-Developed by Thabiso Lekubu\n")
+        print(f"[+]Capture Data/Logs files is found in database.py for future reference/evidence of live attacks\n")
+        print(f"[+]NetworkEye listening on {self.interface}... (Ctrl+C to stop)\n")
         sniff(iface=self.interface, prn=self._handle_packet, store=0)
 
     def _handle_packet(self, pkt):
